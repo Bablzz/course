@@ -8,13 +8,14 @@
 // Обработать все варианты исходных данных.
 #include <iostream>
 #include <math.h>
+#include <stdio.h>
 using namespace std;
 void solve_equation(double a, double b, double c){
  double d, x1, x2;
-  if (a = 0) {
+  if (a == 0) {
     cout << "Уравнение не имеет корней" << endl;
   }
-   else { if ((b = 0) || (c = 0)) {
+   else { if ((b == 0) || (c == 0)) {
         cout << "x1,2 = 0" << endl;
 
      } else {
@@ -23,12 +24,12 @@ void solve_equation(double a, double b, double c){
 if (d > 0) {
     x1 = (-1*b + sqrt(pow(b,2) - 4*a*c));
     x2 = (-1*b - sqrt(pow(b,2) - 4*a*c));
-    } else { if (d = 0) {
-        x1 = (-1*b)/(2*a);
+    } else { if (d == 0) {
+        x1 = x2 = (-1*b)/(2*a);
     }
     }
-cout << "x1 = " << x1 << endl;
-cout << "x2 = " << x2 << endl;
+printf("x1= %4.2f \n", x1);
+printf("x1= %4.2f \n", x2);
 }
 
 }
