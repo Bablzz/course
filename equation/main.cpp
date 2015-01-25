@@ -12,8 +12,9 @@
 using namespace std;
 void solve_equation(double a, double b, double c){
  double d, x1, x2;
-  if (a == 0) {
-    cout << "Уравнение не имеет корней" << endl;
+  if (a == 0) { //fabs(a)>EPS, где EPS = 1e-10
+    cout << "x2 = " << endl;
+    cout << -1*(b/c) << endl;
   }
    else { if ((b == 0) || (c == 0)) {
         cout << "x1,2 = 0" << endl;
@@ -27,7 +28,7 @@ if (d > 0) {
     } else { if (d == 0) {
         x1 = x2 = (-1*b)/(2*a);
     }
-    }
+}
 printf("x1= %4.2f \n", x1);
 printf("x1= %4.2f \n", x2);
 }
