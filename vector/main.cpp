@@ -28,8 +28,10 @@ void sum(Vector A, Vector B, Vector summa) {
 }
 
 // Разность
-Point sub(Vector A, Vector B){
-  // TODO: Реализовать
+void sub(Vector A, Vector B, Vector subV){
+  subV.x = A.x - B.x;
+  subV.y = A.y - B.y;
+  cout << "vector sub  = (" << subV.x<< "),(" <<subV.y << ")";
 }
 
 // Скалярное произведение векторов
@@ -41,10 +43,12 @@ int main()
 {
     Point a = {1.2, 1.3},
           b = {10.2, 3.3},
-          summ = {0,0};
+          summ = {0,0},
+          subV = {0,0};
 
     cout << dist(a,b) << endl;
     sum(a,b,summ);
-
+    cout << endl;
+    sub(a,b, subV);
     return 0;
 }
