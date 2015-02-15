@@ -32,11 +32,13 @@ void MainWindow::on_toolButton_clicked() {
 // Переход по кнопке из избранного
 void MainWindow::on_goToHistory_clicked() {
   // TODO: реализовать
+  QPushButton *button = (QPushButton *)QObject::sender();
   QString url = button->text();
     // Выводим URL для отладки
   qDebug() << "URL:" << url;
     // Переходим по заданному адресу
   ui->webView->setUrl(url);
+  connect(button, SIGNAL(clicked()), this, SLOT(on_goToHistory_clicked()));
 }
 
 // Когда меняется URL в webView => меняем и URL в строке адреса
